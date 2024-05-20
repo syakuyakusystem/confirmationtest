@@ -4,6 +4,14 @@
 /**
 * Add border box sizing in all browsers (opinionated).
 */
+// <uniquifier>: Use a unique and descriptive class name
+
+.domine-<uniquifier> {
+    font-family: "Domine", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
 
 *,
 ::before,
