@@ -25,7 +25,7 @@
 
         <div class="form">
             <div class="form_content">
-                <form class="form_text" action="/contacts/order" method="POST">
+                <form class="form_text" action="{{route('store')}}" method="POST">
                 @csrf
                 <table>
 
@@ -35,9 +35,15 @@
                         </th>
                         <td>
                             <input type="text" class="inputbox" name="first_name">
+                            <!-- @if($errors->has('first_name'))
+                            <span>{{$errors->first('first_name')}}</span>
+                            @endif -->
                         </td>
                         <td>
                             <input type="text" class="inputbox" name="last_name">
+                            <!-- @if($errors->has('last_name'))
+                            <span>{{$errors->first('last_name')}}</span>
+                            @endif -->
                         </td>
                         
                     </tr>
@@ -48,15 +54,15 @@
                             <lavel>性別<span style="color:red;">※</span></lavel>
                         </th>
                         <td class="selecttable">
-                            <input type="radio"name="gender">
+                            <input type="radio"name="gender" value="男性" id="man">
                             <label for="man">男性</label>
                         </td>
                         <td class="selecttable">
-                            <input type="radio" name="gender">
+                            <input type="radio" name="gender" value="女性" id="woman">
                             <label for="woman">女性</label>
                         </td>
                         <td class="selecttable">
-                            <input type="radio" name="gender">
+                            <input type="radio" name="gender" value="その他" id="others">
                             <label for="others">その他</label>
                         </td>
                     </tr>
@@ -67,6 +73,9 @@
                         </th>
                         <td>
                             <input class="inputbox" type="email" name="email">
+                            <!-- @if($errors->has('email'))
+                            <span>{{$errors->first('email')}}</span>
+                            @endif -->
                         </td>
                     </tr>
 
@@ -75,17 +84,18 @@
                             <label>電話番号<span style="color:red;">※</span></label>
                         </th>
                         <td>
-                            <input class="inputbox" type="text" name="No1"> -
+                            <input class="inputbox" type="text" name="tell1" maxlength="4" required/> -
                         </td>
                         <td>
-                            <input class="inputbox" type="text" name="No2"> -
+                            <input class="inputbox" type="text" name="tell2" maxlength="4" required/> -
                         </td>
                         <td>
-                            <input class="inputbox" type="text" name="No3">
+                            <input class="inputbox" type="text" name="tell3" maxlength="4" required/>
                         </td>
                         <td>
-                            <input type="hidden" name="PhoneNumber">
+                            <input type="hidden">
                         </td>
+
                     </tr>
 
                     <tr>
@@ -94,6 +104,9 @@
                         </th>
                         <td>
                             <input class="inputbox" type="text" name="adress">
+                            <!-- @if($errors->has('adress'))
+                            <span>{{$errors->first('adress')}}</span>
+                            @endif -->
                         </td>
                     </tr>
 
@@ -109,6 +122,10 @@
                     <tr>
                         <th>
                             <label>お問い合わせの種類<span style="color:red;">※</span></label>
+                            <select name="category">
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category->id}}">{{ $category['content'] }}</option>
+                                @endforeach
                         </th>
                         <td>
                             <select name="category" id="category">
@@ -125,7 +142,10 @@
                         </th>
                         <td>
                             <input class="textbox" type="textarea" name="detail">
-                        </td>
+                            <!-- @if($errors->has('detail'))
+                            <span>{{$errors->first('detail')}}</span>
+                            @endif
+                        </td> -->
                     </tr>
 
                     
