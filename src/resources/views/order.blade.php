@@ -26,14 +26,16 @@
 
         <div class="form">
             <div class="form_content">
-                <form class="form_text" action="/contacts/order" method="POST">
+                <form class="form_text" action="/contacts" method="POST">
                     @csrf
                     <table>
                         <tbody>
                             <tr>
                                 <th>お名前
-                                    <td>
-                                        <input type="text" name="fitst_name" value="{{ $contact['first_name'] }}{{ $contact['last_name'] }}"/>
+                                    <td>          
+                                        {{ $contact['first_name'] }} {{ $contact['last_name'] }}
+                                        <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}"/>
+                                        <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}"/>
                                     </td>
                                 </th>
                             </tr>
@@ -41,6 +43,7 @@
                                 <th>性別
                                     <td>
                                         {{ $contact['gender'] }}
+                                        <input type="hidden" name="gender" value="{{ $contact['gender'] }}"/>
                                     </td>
                                 </th>
                             </tr>
@@ -55,13 +58,17 @@
                                 <th>電話番号
                                     <td>
                                         {{ $contact['tell1'] }}{{ $contact['tell2'] }}{{ $contact['tell3'] }}
+                                        <input type="hidden" name="tell1" value="{{ $contact['tell1'] }}"/>
+                        <input type="hidden" name="tell2" value="{{ $contact['tell2'] }}"/>
+                        <input type="hidden" name="tell3" value="{{ $contact['tell3'] }}"/>
                                     </td>
                                 </th>
                             </tr>
                             <tr>
                                 <th>住所
                                     <td>
-                                        <input type="text" name="adress" value="{{ $contact['adress'] }}"/>
+                                        {{ $contact['address'] }}
+                                        <input type="hidden" name="address" value="{{ $contact['address'] }}"/>
                                     </td>
                                 </th>
                             </tr>
@@ -83,6 +90,7 @@
                                 <th>お問い合わせの内容
                                     <td>
                                         <input type="text" name="detail" value="{{ $contact['detail'] }}"/>
+                                        <input type="hidden" name="category" value="{{ $contact['category'] }}"/>
                                     </td>
                                 </th>
                             </tr>    
@@ -90,11 +98,15 @@
                     </table>
 
                     <div class="formbutton">
-                        <button>送信</button>
+                        <button type="submit">
+                            送信
+                        </button>
                     </div>
 
-                    <div class="">
-                        <button>修正</button>
+                    <div class="formbutton">
+                        <a class="rounded-md bg-gray-800 text-white px-4 py-2" href="{{ route('index') }}">
+                            修正
+                        </a>
                     </div>
                 </form>
             </div>
