@@ -34,16 +34,16 @@
                             <label for="name">お名前<span style="color:red;">※</span></label>
                         </th>
                         <td>
-                            <input type="text" class="inputbox" name="first_name">
-                            <!-- @if($errors->has('first_name'))
-                            <span>{{$errors->first('first_name')}}</span>
-                            @endif -->
+                            <input type="text" class="inputbox" name="first_name" value="{{ old('first_name')}}"/>
+                            @error('first_name')
+                            {{$message}}
+                            @enderror
                         </td>
                         <td>
-                            <input type="text" class="inputbox" name="last_name">
-                            <!-- @if($errors->has('last_name'))
-                            <span>{{$errors->first('last_name')}}</span>
-                            @endif -->
+                            <input type="text" class="inputbox" name="last_name" value="{{ old('last_name')}}"/>
+                            @error('last_name')
+                            {{$message}}
+                            @enderror
                         </td>
                         
                     </tr>
@@ -54,17 +54,21 @@
                             <lavel>性別<span style="color:red;">※</span></lavel>
                         </th>
                         <td class="selecttable">
-                            <input type="radio"name="gender" value="男性" id="man">
+                            <input type="radio"name="gender" value="男性" id="man" value="{{ old('gender')}}"/>
                             <label for="man">男性</label>
                         </td>
                         <td class="selecttable">
-                            <input type="radio" name="gender" value="女性" id="woman">
+                            <input type="radio" name="gender" value="女性" id="woman" value="{{ old('gender')}}"/>
                             <label for="woman">女性</label>
                         </td>
                         <td class="selecttable">
-                            <input type="radio" name="gender" value="その他" id="others">
+                            <input type="radio" name="gender" value="その他" id="others" value="{{ old('gender')}}"/>
                             <label for="others">その他</label>
                         </td>
+                        @error('gender')
+                            {{$message}}
+                        @enderror
+                        
                     </tr>
     
                     <tr>
@@ -72,11 +76,11 @@
                             <label>メールアドレス<span style="color:red;">※</span></label>
                         </th>
                         <td>
-                            <input class="inputbox" type="email" name="email">
-                            <!-- @if($errors->has('email'))
-                            <span>{{$errors->first('email')}}</span>
-                            @endif -->
+                            <input class="inputbox" type="email" name="email" value="{{ old('email')}}"/>
                         </td>
+                        @error('email')
+                            {{$message}}
+                        @enderror
                     </tr>
 
                     <tr>
@@ -84,17 +88,20 @@
                             <label>電話番号<span style="color:red;">※</span></label>
                         </th>
                         <td>
-                            <input class="inputbox" type="text" name="tell1" maxlength="4" required/> -
+                            <input class="inputbox" type="text" name="tell1" maxlength="4" value="{{ old('tell')}}" required/> -
                         </td>
                         <td>
-                            <input class="inputbox" type="text" name="tell2" maxlength="4" required/> -
+                            <input class="inputbox" type="text" name="tell2" maxlength="4" value="{{ old('tell')}}" required/> -
                         </td>
                         <td>
-                            <input class="inputbox" type="text" name="tell3" maxlength="4" required/>
+                            <input class="inputbox" type="text" name="tell3" maxlength="4" value="{{ old('tell')}}" required/>
                         </td>
                         <td>
                             <input type="hidden">
                         </td>
+                        @error('tell')
+                            {{$message}}
+                        @enderror
 
                     </tr>
 
@@ -103,11 +110,11 @@
                             <label>住所<span style="color:red;">※</span></label>
                         </th>
                         <td>
-                            <input class="inputbox" type="text" name="adress">
-                            <!-- @if($errors->has('adress'))
-                            <span>{{$errors->first('adress')}}</span>
-                            @endif -->
+                            <input class="inputbox" type="text" name="address" value="{{ old('adress')}}"/>
                         </td>
+                        @error('adress')
+                            {{$message}}
+                        @enderror
                     </tr>
 
                     <tr>
@@ -115,22 +122,19 @@
                             <label>建物名</label>
                         </th>
                         <td>
-                            <input class="inputbox" type="text" name="building">
+                            <input class="inputbox" type="text" name="building"/>
                         </td>
                     </tr>
 
                     <tr>
                         <th>
                             <label>お問い合わせの種類<span style="color:red;">※</span></label>
+                            
+                        </th>
+                        <td>
                             <select name="category">
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id}}">{{ $category['content'] }}</option>
-                                @endforeach
-                        </th>
-                        <td>
-                            <select name="category" id="category">
-                                @foreach($categories as $category)
-                                <option class="inputbox"  value="{{$category->id}}">{{$category->content}}</option>
                                 @endforeach
                             </select>
                         </td>
@@ -141,11 +145,11 @@
                             <label>お問い合わせ内容<span style="color:red;">※</span></label>
                         </th>
                         <td>
-                            <input class="textbox" type="textarea" name="detail">
-                            <!-- @if($errors->has('detail'))
-                            <span>{{$errors->first('detail')}}</span>
-                            @endif
-                        </td> -->
+                            <input class="textbox" type="textarea" name="detail" value="{{ old('detail')}}"/>
+                        </td>
+                        @error('detail')
+                            {{$message}}
+                        @enderror
                     </tr>
 
                     

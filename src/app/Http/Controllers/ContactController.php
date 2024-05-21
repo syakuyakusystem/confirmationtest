@@ -17,10 +17,10 @@ class ContactController extends Controller
   }
   
 
-  public function order(Request $request)
+  public function order(ContactRequest $request)
   {
+
     $contact =$request->all();
-    // dd($contact);
 
     $category = Category::findOrFail($contact['category']);
     $contact['category_content'] = $category->content;
@@ -28,8 +28,18 @@ class ContactController extends Controller
     $categories = Category::all();
 
     return view('order', compact('contact','categories'));
+    
   }
   
+
+  public function store(ContactRequest $request)
+  {
+    $contact =$request->all();
+
+    $contact = Contact::create($request->all());
+
+    return view('thanks', compact('contact'));
+  }
 
 
 
