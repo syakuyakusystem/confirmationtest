@@ -18,7 +18,15 @@
     <header  calss="container">
         <h2 class="container_header">FashionablyLate</h2>
 
-        <button>logout</button>
+        <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
     </header>
 
     <main>
@@ -60,13 +68,7 @@
                 </thead>
                 <tbody>
                     <!-- 支出データのループ処理 -->
-                    @foreach($contacts as $contact)
-                    <tr>
-                        <td>
-                            {{$contact -> first_name }}
-                        </td>
 
-                    @endforeach
                     </tr>
                 </tbody>
             </table>

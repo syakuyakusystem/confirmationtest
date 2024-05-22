@@ -62,7 +62,7 @@ class ContactController extends Controller
     
     $contact = Contact::get();
 
-    return view('admin',compact('contact'));
+    return view('admin');
   }
 
 
