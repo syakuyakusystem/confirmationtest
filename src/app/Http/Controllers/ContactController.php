@@ -41,6 +41,30 @@ class ContactController extends Controller
     return view('thanks', compact('contact'));
   }
 
+  public function login()
+  {
+    return view('auth.login');
+  }
+
+  public function register()
+  {
+    return view('auth.register');
+  }
+
+  public function home()
+  {
+    return view('home');
+  }
+
+  
+  public function admin(Request $request)
+  {
+    
+    $contact = Contact::get();
+
+    return view('admin',compact('contact'));
+  }
+
 
 
 

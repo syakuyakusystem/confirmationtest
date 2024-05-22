@@ -14,10 +14,10 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        Category::create(['content' => '商品について']);
+        Category::create(['content' => '商品のお届けについて']);
         Category::create(['content' => '商品の交換について']);
-        Category::create(['content' => '商品の返品について']);
-        Category::create(['content' => 'サービスや商品に関するお問い合わせ']);
-        Category::create(['content' => 'その他お問い合わせ']);
+        Category::create(['content' => '商品トラブル']);
+        Category::create(['content' => 'ショップへのお問い合わせ']);
+        Category::create(['content' => 'その他']);
     }
 }
