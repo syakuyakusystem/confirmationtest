@@ -104,7 +104,7 @@
                     </div>
 
                     <div class="formbutton">
-                        <a class="rounded-md bg-gray-800 text-white px-4 py-2" href="{{ route('index') }}">
+                        <button type="submit">
                             修正
                         </a>
                     </div>
