@@ -59,10 +59,11 @@ class ContactController extends Controller
   
   public function admin(Request $request)
   {
-    
-    $contact = Contact::get();
+    $contact = new Contact();
+    $data = $contact->all();
 
-    return view('admin');
+
+    return view('admin', ['data' => $data]);
   }
 
 

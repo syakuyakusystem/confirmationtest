@@ -19,14 +19,14 @@
         <h2 class="container_header">FashionablyLate</h2>
 
         <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+           onclick="event.preventDefault();
+             document.getElementById('logout-form').submit();">
+            {{ __('Logout') }}
+        </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+           @csrf
+        </form>
     </header>
 
     <main>
@@ -68,8 +68,31 @@
                 </thead>
                 <tbody>
                     <!-- 支出データのループ処理 -->
+                   <tr>
+                      <td>
+                        @foreach($data as $contactData)
+		                   {{ $contactData->first_name }}{{ $contactData->last_name }}
+	                    @endforeach
+                      </td>
+                      <td>
+                        @foreach($data as $contactData)
+		                   {{ $contactData->gender }}
+	                    @endforeach
+                      </td>
+                      <td>
+                        @foreach($data as $contactData)
+		                   {{ $contactData->email }}
+	                    @endforeach
+                      </td>
+                      <td>
+                        <!-- ここにカテゴリーテーブルからもってくる -->
+                      </td>
+                   </tr>
+	         	 
 
-                    </tr>
+                 
+
+                    
                 </tbody>
             </table>
         </div>
