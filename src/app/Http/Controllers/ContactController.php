@@ -36,6 +36,7 @@ class ContactController extends Controller
   {
     $contact =$request->all();
 
+
     $contact = Contact::create($request->all());
 
     return view('thanks', compact('contact'));
@@ -61,6 +62,7 @@ class ContactController extends Controller
   {
     $contact = new Contact();
     $data = $contact->all();
+    
 
 
     return view('admin', ['data' => $data]);
