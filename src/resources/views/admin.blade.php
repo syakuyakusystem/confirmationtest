@@ -32,6 +32,7 @@
     <main>
         <h3>Admin</h3>
 
+        <div class="contentbox">
         <div class="balance">
             <table>
                     <tr>
@@ -66,35 +67,29 @@
                         <th></th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- 支出データのループ処理 -->
-                   <tr>
-                      <td>
-                        @foreach($data as $contactData)
+                <tbody>  
+                    @foreach($data as $contactData)                      
+                    <tr>
+                        <td>    
 		                   {{ $contactData->first_name }}{{ $contactData->last_name }}
-	                    @endforeach
-                      </td>
-                      <td>
-                        @foreach($data as $contactData)
+                        </td>
+                        <td> 
 		                   {{ $contactData->gender }}
-	                    @endforeach
-                      </td>
-                      <td>
-                        @foreach($data as $contactData)
+                        </td>
+                        <td> 
 		                   {{ $contactData->email }}
-	                    @endforeach
-                      </td>
-                      <td>
-                        <!-- ここにカテゴリーテーブルからもってくる -->
-                      </td>
-                   </tr>
-	         	 
-
-                 
-
-                    
+                       </td>  
+                       <td> 
+		                   {{ $contactData->category}}
+                       </td>
+                       <td>
+                            <button>詳細</button>
+                       </td>                         
+                    </tr>  
+                    @endforeach 
                 </tbody>
             </table>
+        </div>
         </div>
     </main>
 </body>

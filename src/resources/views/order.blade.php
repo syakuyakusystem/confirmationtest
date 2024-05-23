@@ -59,8 +59,8 @@
                                     <td>
                                         {{ $contact['tell1'] }}{{ $contact['tell2'] }}{{ $contact['tell3'] }}
                                         <input type="hidden" name="tell1" value="{{ $contact['tell1'] }}"/>
-                        <input type="hidden" name="tell2" value="{{ $contact['tell2'] }}"/>
-                        <input type="hidden" name="tell3" value="{{ $contact['tell3'] }}"/>
+                                        <input type="hidden" name="tell2" value="{{ $contact['tell2'] }}"/>
+                                        <input type="hidden" name="tell3" value="{{ $contact['tell3'] }}"/>
                                     </td>
                                 </th>
                             </tr>

@@ -1,0 +1,24 @@
+* {
+    background-color: rgb(243, 235, 236);
+}
+
+.title {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.title_logo {
+    background-color: white;
+}
+
+.title_link {
+    align-items: flex-end;
+}
+
+.container {
+    text-align: center;
+}
+
+
