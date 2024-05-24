@@ -1,0 +1,56 @@
+.balance {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.text {
+    background-color: rgb(141, 120, 92);
+
+}
+
+.textth {
+    color: white;
+}
+
+.contentbox {
+
+    justify-content: space-between;
+    display: inline-block;
+}
+
+.blancebutton {
+    height: 25px;
+    border: none;
+    margin-top: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+table {
+    border: 1px solid;
+    border-color: #dbcdc1;
+}
+
+.dropdown-item {
+    text-decoration: none;
+    background: rgb(245, 246, 247);
+    padding: 5px;
+    border: 1px solid;
+    color: #dbcdc1;
+}
+
+.subitbutoon {
+    background-color: rgb(141, 120, 92);
+    color: white;
+    padding: 0 15px;
+}
+
+.rsettobutton {
+    background-color: rgb(221, 195, 161);
+    color: white;
+}

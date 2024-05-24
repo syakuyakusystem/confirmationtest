@@ -62,12 +62,19 @@ class ContactController extends Controller
   {
     $contact = new Contact();
     $data = $contact->all();
-    
 
-
-    return view('admin', ['data' => $data]);
+    $users = Contact::paginate(7);
+   
+    return view('admin', ['users' => $users, 'data' => $data]);
   }
 
+  // public function search(Request $request)
+  // {
+  //   $contacts = Contact::with('category')->CategorySearch($request->category_id)->KeywordSearch($request->keyword)->get();
+  //   $categories = Category::all();
+
+  //   return view('admin', compact('contacts', 'categories'));
+  // }
 
 
 

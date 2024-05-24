@@ -34,13 +34,13 @@
                             <label for="name">お名前<span style="color:red;">※</span></label>
                         </th>
                         <td>
-                            <input type="text" class="inputbox" name="first_name" value="{{ old('first_name')}}"/>
+                            <input placeholder="例:山田" type="text" class="inputbox" name="first_name" value="{{ old('first_name')}}"/>
                             @error('first_name')
                             {{$message}}
                             @enderror
                         </td>
                         <td>
-                            <input type="text" class="inputbox" name="last_name" value="{{ old('last_name')}}"/>
+                            <input placeholder="例:太郎"  type="text" class="inputbox" name="last_name" value="{{ old('last_name')}}"/>
                             @error('last_name')
                             {{$message}}
                             @enderror
@@ -76,7 +76,7 @@
                             <label>メールアドレス<span style="color:red;">※</span></label>
                         </th>
                         <td>
-                            <input class="inputbox" type="email" name="email" value="{{ old('email')}}"/>
+                            <input placeholder="例:test@example.com" class="inputbox" type="email" name="email" value="{{ old('email')}}"/>
                         </td>
                         @error('email')
                             {{$message}}
@@ -88,13 +88,13 @@
                             <label>電話番号<span style="color:red;">※</span></label>
                         </th>
                         <td>
-                            <input class="inputbox" type="text" name="tell1" maxlength="4" value="{{ old('tell')}}" required/> -
+                            <input placeholder="080" class="inputbox" type="text" name="tell1" maxlength="4" value="{{ old('tell')}}" required/> -
                         </td>
                         <td>
-                            <input class="inputbox" type="text" name="tell2" maxlength="4" value="{{ old('tell')}}" required/> -
+                            <input placeholder="1234" class="inputbox" type="text" name="tell2" maxlength="4" value="{{ old('tell')}}" required/> -
                         </td>
                         <td>
-                            <input class="inputbox" type="text" name="tell3" maxlength="4" value="{{ old('tell')}}" required/>
+                            <input placeholder="5678" class="inputbox" type="text" name="tell3" maxlength="4" value="{{ old('tell')}}" required/>
                         </td>
                         <td>
                             <input type="hidden">
@@ -110,7 +110,7 @@
                             <label>住所<span style="color:red;">※</span></label>
                         </th>
                         <td>
-                            <input class="inputbox" type="text" name="address" value="{{ old('adress')}}"/>
+                            <input placeholder="例:東京都渋谷区千駄ケ谷1-2-3" class="inputbox" type="text" name="address" value="{{ old('adress')}}"/>
                         </td>
                         @error('adress')
                             {{$message}}
@@ -122,7 +122,7 @@
                             <label>建物名</label>
                         </th>
                         <td>
-                            <input class="inputbox" type="text" name="building"/>
+                            <input placeholder="例:千駄ケ谷マンション101" class="inputbox" type="text" name="building"/>
                         </td>
                     </tr>
 
@@ -132,7 +132,10 @@
                             
                         </th>
                         <td>
-                            <select name="category">
+                            <select placeholder="選択してください" name="category" style="
+                            border:none;
+                            background-color: reb(245, 246, 247);
+                            ">
                                 @foreach ($categories as $category)
                                     <option value="{{ $category->id}}">{{ $category['content'] }}</option>
                                 @endforeach
@@ -145,7 +148,7 @@
                             <label>お問い合わせ内容<span style="color:red;">※</span></label>
                         </th>
                         <td>
-                            <input class="textbox" type="textarea" name="detail" value="{{ old('detail')}}"/>
+                            <input placeholder="お問い合わせ内容をご記載ください" class="textbox" type="textarea" name="detail" value="{{ old('detail')}}"/>
                         </td>
                         @error('detail')
                             {{$message}}

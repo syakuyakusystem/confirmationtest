@@ -28,17 +28,21 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <h2 class="card-header">{{ __('Register') }}</h2>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}"class="card-body">
                         @csrf
 
-                        <div class="row mb-3">
+                        <div class="row mb-3" style="
+                             margin:10%;
+                             background-color: white;
+                            ">
+
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('お名前') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                            <div class="col-md-6" style="background-color: white;">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="山田太郎"  style="background-color: rgb(245, 246, 247);">
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -48,11 +52,14 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div class="row mb-3" style="
+                             margin:5%;
+                             background-color: white;
+                            ">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('メールアドレス') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                            <div class="col-md-6" style="background-color: white;">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="例:test@example.come"   style="background-color: rgb(245, 246, 247);">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -62,11 +69,14 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div class="row mb-3" style="
+                             margin:5%;
+                             background-color: white;
+                            ">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('パスワード') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                            <div class="col-md-6" style="background-color: white;">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required placeholder="coachtech1106"  autocomplete="new-password"  style="background-color: rgb(245, 246, 247);">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -76,17 +86,25 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div class="row mb-3" style="background-color: white;">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            <div class="col-md-6" style="background-color: white;">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" style="background-color: rgb(245, 246, 247);">
                             </div>
                         </div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                        <div class="row mb-0" style="
+                             margin:10%;
+                             background-color: white;
+                            ">
+                            <div class="col-md-6 offset-md-4" style="background-color: white;">
+                                <button type="submit" class="btn btn-primary" style="
+                                border: none;
+                                color: white;
+                                background: rgb(141, 120, 92);
+                                padding: 5px 25px;
+                                ">
                                     {{ __('登録') }}
                                 </button>
                             </div>

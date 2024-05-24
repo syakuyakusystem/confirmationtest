@@ -28,7 +28,7 @@
             <div class="form_content">
                 <form class="form_text" action="/contacts" method="POST">
                     @csrf
-                    <table>
+                    <table class="ordertable">
                         <tbody>
                             <tr>
                                 <th>お名前
@@ -97,16 +97,22 @@
                         </tbody>   
                     </table>
 
-                    <div class="formbutton">
-                        <button type="submit">
-                            送信
-                        </button>
-                    </div>
+                    <div class="buttonbox">
+                        <div class="orderbutoon">
+                            <div class="formbutton" style="
+                            margin-right: 20px;
+                            ">
+                                <button type="submit">
+                                    送信
+                                </button>
+                            </div>
 
-                    <div class="formbutton">
-                        <button type="submit">
-                            修正
-                        </a>
+                            <div class="formbutton">
+                                <button type="submit">
+                                    修正
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>

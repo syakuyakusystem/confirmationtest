@@ -29,6 +29,7 @@ label {
     vertical-align: top;
     margin-bottom: 15px;
     margin-right: 35px;
+    background-color: white;
 }
 
 input {
@@ -58,11 +59,36 @@ input {
     border: none;
     background: rgb(141, 120, 92);
     color: #fff;
-    width: 20%;
-    height: 30px;
-    margin-top: 35px;
 }
 
 .tablebutton {
     display: flex;
+}
+
+.page-numbers {
+    height: auto;
+    width: auto;
+}
+
+
+.form-control {
+    background: #fff;
+}
+
+.buttonbox {
+    display: flex;
+    margin: 5%;
+    justify-content: center;
+}
+
+.orderbutoon {
+    display: flex;
+    text-align: center;
+}
+
+.ordertable {
+    display: flex;
+    justify-content: space-around;
+    border: 0.5px solid;
+    margin: 10% 10%;
 }

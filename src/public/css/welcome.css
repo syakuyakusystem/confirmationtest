@@ -7,10 +7,12 @@
     background-color: white;
     justify-content: space-between;
     align-items: end;
+    border: 1px solid #ddd;
 }
 
 .title_logo {
     background-color: white;
+    transform: translate(30px, 10px);
 }
 
 .title_link {
@@ -21,4 +23,14 @@
     text-align: center;
 }
 
+.card-body form {
+    margin-left: 15%;
+    background-color: white;
+    box-shadow: 1px 1px 1px #000;
+    margin-right: 15%;
+    padding: 10px;
+}
 
+.row {
+    margin-top: 30px;
+}
