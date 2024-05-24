@@ -10,13 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Domine:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/common.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/common.css') }}">   
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 </head>
+
+
+
 
 
 <body>
     <header  calss="container">
-        <h2 class="container_header">FashionablyLate</h2>
+        <div></div>
+
+        <h2 class="container_header" style="transform: translate(20px, 10px);">FashionablyLate</h2>
 
         <a class="dropdown-item" href="{{ route('logout') }}"
            onclick="event.preventDefault();
@@ -24,9 +30,6 @@
             {{ __('Logout') }}
         </a>
 
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-           @csrf
-        </form>
     </header>
 
     <main>
@@ -35,36 +38,72 @@
         <div class="contentbox">
         <div class="balance">
             <table>
+                <div class="search">
                     <tr>
-                        <input type="text">
-                        性別<select name="" id=""></select>
-                        お問い合わせの種類<select name="" id=""></select>
-                        <input type="date" id="date" name="date">
-                        <button>検索</button>
-                        <button>リセット</button>
+                        <form action="" value="{{request('search')}}" method="get">
+                            @csrf
+
+                            <input placeholder="名前やメールアドレスを入力してください" type="text" name="keyword" value="{{ old('keyword') }}" >
+
+                            <select class="textbox_gender" placeholder="性別" name="" id="" style="border: none; background: rgb(245, 246, 247);">
+                            <option value="">男性</option>
+                            <option value="">女性</option>
+                            <option value="">その他</option>
+                            </select>
+                            
+                            <select class="textbox_content" placeholder="お問い合わせの種類" name="" id="" style="border: none; background: rgb(245, 246, 247);">
+                            <option value="">商品のお届けについて</option>
+                            <option value="">商品の交換について</option>
+                            <option value="">商品トラブル</option>
+                            <option value="">ショップへのお問い合わせ</option>
+                            <option value="">その他</option>
+                            </select>
+                            
+
+                            <input type="date" id="date" name="date">
+
+                            <input class="subitbutoon" type="submit" value="検索"></input>
+
+                            <input class="rsettobutton" type="submit" value="リセット"></input>
+                        </form>
                     </tr>
-            </table>
-        </div>
-
-        <div>
-            <table>
-                <tr>
-                    <button>エクスポート</button>
-
-                    <!-- ここにページ -->
-                </tr>
+                </div>
             </table>
         </div>
 
         <div class="balance">
+           <button class="blancebutton">エクスポート</button>
+           <div class="page-numbers">
+               <style>
+                svg.w-5.h-5 {
+
+                 width: 30px;
+                 height: 30px;
+                }                 
+               </style>
+                {!! $users->render() !!}
+           </div>
+        </div>
+
+        <div class="contentbox">
             <table>
                 <thead>
-                    <tr>
-                        <th>お名前</th>
-                        <th>性別</th>
-                        <th>メールアドレス</th>
-                        <th>お問い合わせの種類</th>
-                        <th></th>
+                    <tr class="text">
+                        <div class="textth">
+                            <th>
+                                <span style="color:white;">お名前</span>
+                            </th>
+                            <th>
+                                <span style="color:white;">性別</span>
+                            </th>
+                            <th>
+                                <span style="color:white;">メールアドレス</span>
+                            </th>
+                            <th>
+                                <span style="color:white;">お問い合わせの種類</span>
+                            </th>
+                            <th></th>
+                        </div>
                     </tr>
                 </thead>
                 <tbody>  
