@@ -10,19 +10,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Domine:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/common.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/thanks.css') }}">
+    
 </head>
 
-<body>
-    <h1>Thank you</h1>
-    
-    <h2>お問い合わせありがとうございました</h2>
+<body style="
+    margin-top: 15%;
+">
 
-    <div class="formbutton">
-        <a class="rounded-md bg-gray-800 text-white px-4 py-2" href="{{ route('index') }}">
+    <div class="baseBox">
+        <!-- <div class="backStr">Thank you</div> -->
+        <div class="frontStr">
+            <h2>お問い合わせありがとうございました</h2>
+        </div>
+        <div class="formbutton">
+            <a class="rounded-md bg-gray-800 text-white px-4 py-2" href="{{ route('index') }}">
             Home
-        </a>
+            </a>
+        </div>
     </div>
+
+    
+
+</div>
 </body>
 
 </html>
