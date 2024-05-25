@@ -31,8 +31,14 @@
                     <table class="ordertable">
                         <tbody>
                             <tr>
-                                <th>お名前
-                                    <td>          
+                                <th style="
+                                    background-color: rgb(141, 120, 92);
+                                    color: white;
+                                    border-bottom: 1px solid white;
+                                ">お名前
+                                    <td style="
+                                        border-bottom: 1px solid rgb(141, 120, 92);
+                                    ">          
                                         {{ $contact['first_name'] }} {{ $contact['last_name'] }}
                                         <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}"/>
                                         <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}"/>
@@ -40,23 +46,41 @@
                                 </th>
                             </tr>
                             <tr>
-                                <th>性別
-                                    <td>
+                                <th style="
+                                    background-color: rgb(141, 120, 92);
+                                    color: white;
+                                    border-bottom: 1px solid white;
+                                ">性別
+                                    <td style="
+                                        border-bottom: 1px solid rgb(141, 120, 92);
+                                    ">
                                         {{ $contact['gender'] }}
                                         <input type="hidden" name="gender" value="{{ $contact['gender'] }}"/>
                                     </td>
                                 </th>
                             </tr>
                             <tr>
-                                <th>メールアドレス
-                                    <td>
-                                        <input type="text" name="email" value="{{ $contact['email'] }}"/>
+                                <th style="
+                                    background-color: rgb(141, 120, 92);
+                                    color: white;
+                                    border-bottom: 1px solid white;
+                                ">メールアドレス
+                                    <td style="
+                                        border-bottom: 1px solid rgb(141, 120, 92);
+                                    ">
+                                        <input type="text" name="email" value="{{ $contact['email'] }}" style="background: white;"/>
                                     </td>
                                 </th>
                             </tr>
                             <tr>
-                                <th>電話番号
-                                    <td>
+                                <th style="
+                                    background-color: rgb(141, 120, 92);
+                                    color: white;
+                                    border-bottom: 1px solid white;
+                                ">電話番号
+                                    <td style="
+                                        border-bottom: 1px solid rgb(141, 120, 92);
+                                    ">
                                         {{ $contact['tell1'] }}{{ $contact['tell2'] }}{{ $contact['tell3'] }}
                                         <input type="hidden" name="tell1" value="{{ $contact['tell1'] }}"/>
                                         <input type="hidden" name="tell2" value="{{ $contact['tell2'] }}"/>
@@ -65,32 +89,53 @@
                                 </th>
                             </tr>
                             <tr>
-                                <th>住所
-                                    <td>
+                                <th style="
+                                    background-color: rgb(141, 120, 92);
+                                    color: white;
+                                    border-bottom: 1px solid white;
+                                ">住所
+                                    <td style="
+                                        border-bottom: 1px solid rgb(141, 120, 92);
+                                    ">
                                         {{ $contact['address'] }}
                                         <input type="hidden" name="address" value="{{ $contact['address'] }}"/>
                                     </td>
                                 </th>
                             </tr>
                             <tr>
-                                <th>建物名
-                                    <td>
-                                        <input type="text" name="building" value="{{ $contact['building'] }}"/>
+                                <th style="
+                                    background-color: rgb(141, 120, 92);
+                                    color: white;
+                                    border-bottom: 1px solid white;
+                                ">建物名
+                                    <td style="
+                                        border-bottom: 1px solid rgb(141, 120, 92);
+                                    ">
+                                        <input type="text" name="building" value="{{ $contact['building'] }}" style="background: white;"/>
                                     </td>
                                 </th>
                             </tr>
                             <tr>
-                                <th>お問い合わせの種類
-                                    <td>
+                                <th style="
+                                    background-color: rgb(141, 120, 92);
+                                    color: white;
+                                    border-bottom: 1px solid white;
+                                ">お問い合わせの種類
+                                    <td style="
+                                        border-bottom: 1px solid rgb(141, 120, 92);
+                                    ">
                                         <p>{{ $contact['category_content'] }}</p>            
                                     </td>
                                 </th>
                             </tr> 
                             <tr>
-                                <th>お問い合わせの内容
+                                <th style="
+                                    background-color: rgb(141, 120, 92);
+                                    color: white;
+                                ">お問い合わせの内容
                                     <td>
                                         <input type="text" name="detail" value="{{ $contact['detail'] }}"/>
-                                        <input type="hidden" name="category" value="{{ $contact['category'] }}"/>
+                                        <input type="hidden" name="category" value="{{ $contact['category'] }}" style="background-color: white;"/>
                                     </td>
                                 </th>
                             </tr>    
