@@ -1,0 +1,64 @@
+// <uniquifier>: Use a unique and descriptive class name
+
+.domine-<uniquifier> {
+  font-family: "Domine", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+    color: rgb(141, 120, 92);
+}
+
+.body {
+        margin-top: 40%;
+}
+
+.pic-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    height: 500px;
+    padding: 0 3rem;
+    box-sizing: border-box;
+    background-color: #fefefe;
+    z-index: 0;
+}
+
+
+
+
+h2 {
+    position: relative;
+    margin-bottom: 0.2rem;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+}
+
+h2::before {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(245, 246, 247);
+    font-size: 90px;
+    text-transform: uppercase;
+    content: 'Thank you';
+    z-index: -1;
+}
+
+.formbutton {
+    margin-left: 50%;
+    color: #fff;
+    width: 50px;
+}
+
+.formbutton a {
+    background: rgb(141, 120, 92);
+    color:white;
+    text-decoration: none;
+}

@@ -85,10 +85,14 @@
            </div>
         </div>
 
+        <form action="" method="get">
+        @csrf
         <div class="contentbox">
             <table>
                 <thead>
-                    <tr class="text">
+                    <tr class="text" style="
+                      border-bottom: 1px solid rgb(141, 120, 92);
+                    ">
                         <div class="textth">
                             <th>
                                 <span style="color:white;">お名前</span>
@@ -108,7 +112,9 @@
                 </thead>
                 <tbody>  
                     @foreach($data as $contactData)                      
-                    <tr>
+                    <tr style="
+                      border-bottom: 1px solid rgb(141, 120, 92);
+                    ">
                         <td>    
 		                   {{ $contactData->first_name }}{{ $contactData->last_name }}
                         </td>
@@ -122,15 +128,19 @@
 		                   {{ $contactData->category}}
                        </td>
                        <td>
-                            <button>詳細</button>
+                            <div class="btn-wrap" class="primary-btn">
+                                <button type="submit">詳細</button>
+                            </div>
                        </td>                         
                     </tr>  
                     @endforeach 
                 </tbody>
             </table>
         </div>
-        </div>
+        </form>
     </main>
+
+    
 </body>
 
 

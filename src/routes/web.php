@@ -31,4 +31,6 @@ Route::get('/login', [ContactController::class, 'login'])->name('login');
 
 Route::get('/admin', [ContactController::class, 'admin'])->name('admin');
 
+// Route::get('/thanks', [ContactController::class, 'thanks'])->name('thanks');
 // Route::get('/admin/search', [ContactController::class, 'search']);
+

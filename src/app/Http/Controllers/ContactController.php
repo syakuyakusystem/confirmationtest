@@ -57,6 +57,11 @@ class ContactController extends Controller
     return view('home');
   }
 
+  // public function thanks()
+  // {
+  //   return view('thanks');
+  // }
+
   
   public function admin(Request $request)
   {
@@ -77,5 +82,6 @@ class ContactController extends Controller
   // }
 
 
+  
 
 }
