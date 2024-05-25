@@ -128,9 +128,11 @@
 		                   {{ $contactData->category}}
                        </td>
                        <td>
+                        @livewireStyles
                             <div class="btn-wrap" class="primary-btn">
                                 <button type="submit">詳細</button>
                             </div>
+                        @livewireScripts
                        </td>                         
                     </tr>  
                     @endforeach 

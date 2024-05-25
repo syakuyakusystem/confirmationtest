@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Auth\RegisterController;
 
+use App\Http\Controllers\ModalController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +36,4 @@ Route::get('/admin', [ContactController::class, 'admin'])->name('admin');
 // Route::get('/thanks', [ContactController::class, 'thanks'])->name('thanks');
 // Route::get('/admin/search', [ContactController::class, 'search']);
 
+Route::get('/modal', [ModalController::class, 'modal']);
